@@ -1,0 +1,10 @@
+1. add .gitignore file (yalniz 1 defe)
+2. git init (yalniz 1 defe)
+3. git remote add <<url>> (yalniz 1 defe)
+4. git add .
+5. git commit -m "your message here"
+6. git push origin main/master
+7. git status
+
+1. git clone <<url>> (yalniz 1 defe)
+2. git pull
