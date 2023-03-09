@@ -1,4 +1,4 @@
-package az.atlacademy.lesson04;
+package az.atlacademy.lesson01_p4;
 
 public class PrintApp {
 

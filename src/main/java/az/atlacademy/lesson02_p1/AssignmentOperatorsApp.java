@@ -1,4 +1,4 @@
-package az.atlacademy.lesson05;
+package az.atlacademy.lesson02_p1;
 
 public class AssignmentOperatorsApp {
 

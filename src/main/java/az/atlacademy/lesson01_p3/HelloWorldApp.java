@@ -1,4 +1,4 @@
-package az.atlacademy.lesson03;
+package az.atlacademy.lesson01_p3;
 
 public class HelloWorldApp {
 
