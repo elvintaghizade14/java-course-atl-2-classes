@@ -1,4 +1,4 @@
-package az.atlacademy.lesson03_p2;
+package az.atlacademy.module01.lesson03_p2;
 
 public class AlphabetApp {
 

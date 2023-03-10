@@ -1,4 +1,4 @@
-package az.atlacademy.lesson03_p1;
+package az.atlacademy.module01.lesson03_p1;
 
 public class OperatorApp {
 

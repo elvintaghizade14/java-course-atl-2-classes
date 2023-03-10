@@ -1,4 +1,4 @@
-package az.atlacademy.lesson01_p4;
+package az.atlacademy.module01.lesson01_p4;
 
 public class VariableApp {
     public static void mainV1(String[] args) {

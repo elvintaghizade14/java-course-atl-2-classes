@@ -1,4 +1,4 @@
-package az.atlacademy.lesson02;
+package az.atlacademy.module01.lesson02;
 
 public class TernaryOperatorApp {
 
