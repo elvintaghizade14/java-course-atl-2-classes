@@ -30,10 +30,20 @@ public class ShapeApp {
 
         String s = "1";
         System.out.println(s instanceof String);
+
+        System.out.println("---");
+        Shape shape2 = new Circle();
+        shape2.print();
+        //if (shape2 instanceof Triangle) {
+            Triangle d = (Triangle) shape2;
+            d.print();
+        //}
     }
 
     private static void call(Shape shape) {
-        shape.print();
+        if(!(shape instanceof Circle)) {
+            shape.print();
+        }
     }
 
     /*private static void call(Rectangle rectangle) {
