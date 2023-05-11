@@ -3,9 +3,11 @@ package az.atlacademy.module01.lesson16;
 public class MyLinkedList<E> {
 
     public MyNode<E> head;
+    public int size = 0;
 
     public MyLinkedList(E data) {
         this.head = new MyNode<>(data);
+        this.size = 1;
     }
 
     public void addTail(E data) {
@@ -18,6 +20,19 @@ public class MyLinkedList<E> {
             curr = curr.next;
         }
         curr.next = new MyNode<>(data);
+        this.size++;
+    }
+
+    public void addHead(E data) {
+        // MyNode<E> newHead = new MyNode<>(data, head);
+        // this.head = newHead;
+        this.head = new MyNode<>(data, head);
+        this.size++;
+    }
+
+    public void clear() {
+        this.head = null;
+        this.size = 0;
     }
 
     @Override
