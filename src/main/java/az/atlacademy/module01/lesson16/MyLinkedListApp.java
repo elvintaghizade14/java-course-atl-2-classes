@@ -15,9 +15,11 @@ public class MyLinkedListApp {
         linkedList.addHead(8);
         System.out.println(linkedList.size);
         System.out.println(linkedList);
+        linkedList.findByIndex(3).ifPresent(System.out::println);
         linkedList.clear();
         System.out.println(linkedList.size);
         System.out.println(linkedList);
+        linkedList.findByIndex(-1);
     }
 
 }

@@ -1,5 +1,7 @@
 package az.atlacademy.module01.lesson16;
 
+import java.util.Optional;
+
 public class MyLinkedList<E> {
 
     public MyNode<E> head;
@@ -33,6 +35,21 @@ public class MyLinkedList<E> {
     public void clear() {
         this.head = null;
         this.size = 0;
+    }
+
+    public Optional<E> findByIndex(int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException(index + " is wrong!");
+        }
+        int counter = 0;
+        MyNode<E> curr = head;
+        while (curr.next != null) {
+            if (index == ++counter) {
+                return Optional.of(curr.data);
+            }
+            curr = curr.next;
+        }
+        return Optional.empty();
     }
 
     @Override
