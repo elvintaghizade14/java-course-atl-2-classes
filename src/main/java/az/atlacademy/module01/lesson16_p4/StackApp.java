@@ -36,9 +36,7 @@ public class StackApp {
         if (stack.isEmpty()) {
             return Optional.empty();
         }
-        final Operation operationEnum = stack.peek();
-        stack.removeLast();
-        return Optional.of(operationEnum);
+        return Optional.of(stack.removeLast());
     }
 
     public enum Operation {
