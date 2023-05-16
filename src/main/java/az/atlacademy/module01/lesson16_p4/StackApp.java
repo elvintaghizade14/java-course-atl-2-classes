@@ -33,10 +33,10 @@ public class StackApp {
     }
 
     public static Optional<Operation> ctrlZ() {
-        if (stack.isEmpty()) {
-            return Optional.empty();
+        if (!stack.isEmpty()) {
+            return Optional.of(stack.removeLast());
         }
-        return Optional.of(stack.removeLast());
+        return Optional.empty();
     }
 
     public enum Operation {
