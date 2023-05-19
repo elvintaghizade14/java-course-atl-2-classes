@@ -14,7 +14,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-public class StreamApp {
+public class FunctionalProgrammingApp {
 
     public static void main(String[] args) {
         IntSummaryStatistics stats = new Random()
