@@ -56,6 +56,7 @@ public class StreamApp {
                 .boxed()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(counts3);
+        System.out.println(counts.getOrDefault('G', 1));
     }
 
 }
