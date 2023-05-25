@@ -24,7 +24,8 @@ public class FinallyApp {
             }
         }
 
-        try(BufferedInputStream bis2 = new BufferedInputStream(new FileInputStream(StudentFileApp.RESOURCE + "nums.ser"))) {
+        try (BufferedInputStream bis2 = new BufferedInputStream(
+                new FileInputStream(StudentFileApp.RESOURCE + "nums.ser"))) {
             byte[] bytes = bis2.readAllBytes();
             System.out.println(Arrays.toString(bytes));
         } catch (IOException e) {
