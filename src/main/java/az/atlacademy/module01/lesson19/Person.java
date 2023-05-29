@@ -10,7 +10,7 @@ public final class Person implements Serializable {
     public final long id;
     public final String name;
     public final String surname;
-    public transient LocalDate date;
+    private transient LocalDate date;
 
     public Person(int id, String name, String surname) {
         this.id = id;
