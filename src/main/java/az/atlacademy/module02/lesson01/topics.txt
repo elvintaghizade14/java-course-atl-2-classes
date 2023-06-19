@@ -1,0 +1,4 @@
+ - docker
+ - intro to db (postgres)
+ - DDL intro (create/drop db/table)
+ - DML intro (select * from people)
