@@ -1,0 +1,7 @@
+Java Database Connectivity (JDBC)
+ - JDBC API
+ - Java Database Drivers
+ - Connection to database
+ - Statement, Callable Statement, Prepared Statement
+ - Result Sets
+ - Auto commit

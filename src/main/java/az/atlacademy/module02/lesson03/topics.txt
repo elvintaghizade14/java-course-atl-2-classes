@@ -1,0 +1,7 @@
+Aggregating Data Using Group Functions. Subqueries
+ - Group Functions?
+ - Using the AVG and SUM Functions
+ - Using the MIN and MAX Functions
+ - Using a Subquery to Solve a Problem
+ - Subquery Syntax
+ - Using a Subquery
