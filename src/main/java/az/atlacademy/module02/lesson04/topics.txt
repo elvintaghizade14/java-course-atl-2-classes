@@ -2,5 +2,4 @@ Constraints. Displaying Data from Multiple Tables
  - Obtaining Data from Multiple Tables.
  - Cartesian Products
  - Generating a Cartesian Product
- - Types of Joins
  - Primary key, Foreign Key, Unique, Not Null, Check
