@@ -11,6 +11,11 @@ public class Student {
     public Student() {
     }
 
+    public Student(String name, String pin) {
+        this.name = name;
+        this.pin = pin;
+    }
+
     public Student(int id, String name, String pin) {
         this.id = id;
         this.name = name;
