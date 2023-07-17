@@ -4,4 +4,3 @@ Java Database Connectivity (JDBC)
  - Connection to database
  - Statement, Callable Statement, Prepared Statement
  - Result Sets
- - Auto commit
