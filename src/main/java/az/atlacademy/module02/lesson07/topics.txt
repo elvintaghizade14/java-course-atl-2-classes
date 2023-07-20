@@ -1,0 +1,6 @@
+Java Database Connectivity (JDBC) - final
+ - Creating proper project structure
+ - Input -> process -> output
+ - Controller -> Service -> DAO (Repository)
+ - Simple registration app with controller-service-dao pattern
+ - Transactions (commit, savepoint, rollback)
