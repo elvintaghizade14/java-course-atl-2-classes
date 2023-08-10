@@ -1,6 +1,6 @@
 package az.atlacademy.springbootjdbcexample.service;
 
-import az.atlacademy.springbootjdbcexample.dao.StudentPostgresDao;
+import az.atlacademy.springbootjdbcexample.dao.StudentJdbcTemplateDao;
 import az.atlacademy.springbootjdbcexample.exception.StudentNotFoundException;
 import az.atlacademy.springbootjdbcexample.model.Student;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class StudentService {
 
-    private final StudentPostgresDao studentDao;
+    private final StudentJdbcTemplateDao studentDao;
 
     public Student findStudentByPin(String pin) throws StudentNotFoundException {
         return studentDao.findStudentByPin(pin)
@@ -22,7 +22,7 @@ public class StudentService {
 
     public void createStudent(Student student) {
         final String pin = student.getPin();
-        Optional<Student> studentByPin = studentDao.findStudentByPin(pin);
+        final Optional<Student> studentByPin = studentDao.findStudentByPin(pin);
         if (studentByPin.isPresent()) {
             throw new IllegalArgumentException("Student with pin - " + pin + " already exists!");
         }
