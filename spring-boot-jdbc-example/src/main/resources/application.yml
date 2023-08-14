@@ -1,5 +1,8 @@
 server:
   port: 9000
+  error:
+    include-message: always
+    include-stacktrace: never
 
 url: "jdbc:postgresql://127.0.0.1:5432/postgres"
 user: "postgres"
