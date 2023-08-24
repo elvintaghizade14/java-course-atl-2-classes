@@ -6,6 +6,7 @@ import az.atl.productmanagementapp.exception.ProductNotFoundException;
 import az.atl.productmanagementapp.mapper.ProductMapper;
 import az.atl.productmanagementapp.model.dto.ProductDto;
 import az.atl.productmanagementapp.model.request.CreateProductRequest;
+import az.atl.productmanagementapp.model.request.UpdateProductRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -46,6 +47,21 @@ public class ProductService {
         ProductEntity savedEntity = productRepository.save(productEntity);
         log.info("Create product response with body: [{}]", savedEntity);
         return productMapper.toDto(savedEntity);
+    }
+
+    @Transactional
+    public ProductDto updateProduct(long id, UpdateProductRequest request) {
+        ProductEntity productEntity = productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("Product with id [" + id + "] not found!"));
+        productEntity.setPrice(request.getPrice());
+        productEntity.setStockStatus(request.getStockStatus());
+        return productMapper.toDto(productRepository.save(productEntity));
+    }
+
+    @Transactional
+    public void deleteProduct(long id) {
+        productRepository.findById(id)
+                .ifPresent(productEntity -> productRepository.deleteById(id));
     }
 
 }
