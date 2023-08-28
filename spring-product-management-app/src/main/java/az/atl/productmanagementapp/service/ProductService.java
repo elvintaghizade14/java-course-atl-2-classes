@@ -5,12 +5,15 @@ import az.atl.productmanagementapp.dao.repository.ProductRepository;
 import az.atl.productmanagementapp.exception.ProductNotFoundException;
 import az.atl.productmanagementapp.mapper.ProductMapper;
 import az.atl.productmanagementapp.model.dto.ProductDto;
+import az.atl.productmanagementapp.model.enums.StockStatus;
 import az.atl.productmanagementapp.model.request.CreateProductRequest;
 import az.atl.productmanagementapp.model.request.UpdateProductRequest;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -62,6 +65,20 @@ public class ProductService {
     public void deleteProduct(long id) {
         productRepository.findById(id)
                 .ifPresent(productEntity -> productRepository.deleteById(id));
+    }
+
+    @Scheduled(fixedRate = 3, timeUnit = TimeUnit.SECONDS, initialDelay = 10)
+    public void gatherStock() {
+        System.out.println(Thread.currentThread().getName());
+        productRepository.findAllByStockStatus(StockStatus.UNAVAILABLE)
+                .forEach(System.out::println);
+    }
+
+    @Scheduled(cron = "4 23 * * * *")
+    public void gatherStock2() {
+        System.out.println(Thread.currentThread().getName());
+        productRepository.findAllByStockStatus(StockStatus.AVAILABLE)
+                .forEach(System.out::println);
     }
 
 }
